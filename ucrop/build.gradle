@@ -1,13 +1,11 @@
 apply plugin: 'com.android.library'
-apply from: '../mavenpush.gradle'
+//apply from: '../mavenpush.gradle'
 
 android {
     compileSdk 33
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 33
-        versionCode 27
-        versionName "2.2.9-native"
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -27,9 +25,7 @@ android {
 
     resourcePrefix 'ucrop_'
 
-    sourceSets.main {
-        jni.srcDirs = []
-    }
+    namespace 'com.yalantis.ucrop'
 
 }
 
