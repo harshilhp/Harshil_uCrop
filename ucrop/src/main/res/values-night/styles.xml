@@ -55,7 +55,7 @@
     </style>
 
     <style name="ucrop_CropperTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+<!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
     </style>
 
 </resources>

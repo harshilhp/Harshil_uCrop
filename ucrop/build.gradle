@@ -1,11 +1,12 @@
 apply plugin: 'com.android.library'
 //apply from: '../mavenpush.gradle'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
+    compileSdk 36
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 33
+        minSdkVersion 21
+        targetSdkVersion 36
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -16,8 +17,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
     lintOptions {
         abortOnError false
@@ -30,6 +31,7 @@ android {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
     implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
     implementation "androidx.exifinterface:exifinterface:${androidx_exifinterface_version}"
     implementation "androidx.transition:transition:${androidx_transition_version}"
