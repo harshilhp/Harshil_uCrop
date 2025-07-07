@@ -1,13 +1,12 @@
 apply plugin: 'com.android.library'
-apply from: '../mavenpush.gradle'
+//apply from: '../mavenpush.gradle'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
+    compileSdk 36
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 33
-        versionCode 27
-        versionName "2.2.9-native"
+        minSdkVersion 21
+        targetSdkVersion 36
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -18,8 +17,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     lintOptions {
         abortOnError false
@@ -27,13 +26,12 @@ android {
 
     resourcePrefix 'ucrop_'
 
-    sourceSets.main {
-        jni.srcDirs = []
-    }
+    namespace 'com.yalantis.ucrop'
 
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
     implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
     implementation "androidx.exifinterface:exifinterface:${androidx_exifinterface_version}"
     implementation "androidx.transition:transition:${androidx_transition_version}"
